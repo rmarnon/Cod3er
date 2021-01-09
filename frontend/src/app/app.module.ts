@@ -29,6 +29,7 @@ import { ProductCrudComponent } from './views/product-crud/product-crud.componen
 import { ProductReadComponent } from './components/product/product-read/product-read.component';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
 import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
+import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
 
 registerLocaleData(localePt);
 
@@ -45,7 +46,8 @@ registerLocaleData(localePt);
     ProductCrudComponent,
     ProductCreateComponent,
     ProductReadComponent,
-    ProductUpdateComponent
+    ProductUpdateComponent,
+    ProductDeleteComponent
   ],
   imports: [
     BrowserModule,
