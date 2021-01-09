@@ -4,6 +4,7 @@
 
     display: flex;
     justify-content: flex-end;
+    background-color: cornflowerblue;
 }
 
 .footer > span {
