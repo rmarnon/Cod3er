@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt';
 
 import { FormsModule } from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -23,7 +25,10 @@ import { NavComponent } from './components/template/nav/nav.component';
 import { ForDirective } from './directives/for.directive';
 import { HomeComponent } from './views/home/home.component';
 import { ProductCrudComponent } from './views/product-crud/product-crud.component';
+import { ProductReadComponent } from './components/product/product-read/product-read.component';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
+
+registerLocaleData(localePt);
 
 @NgModule({
   declarations: [
@@ -36,7 +41,8 @@ import { ProductCreateComponent } from './components/product/product-create/prod
     ForDirective,
     HomeComponent,
     ProductCrudComponent,
-    ProductCreateComponent
+    ProductCreateComponent,
+    ProductReadComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +59,10 @@ import { ProductCreateComponent } from './components/product/product-create/prod
     MatInputModule,
     FormsModule
   ],
-  providers: [],
+  providers: [{
+    provide: LOCALE_ID,
+    useValue: 'pt-BR'
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
