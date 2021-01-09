@@ -29,6 +29,11 @@
       "name": "Nintendo Switch",
       "price": "2999.00",
       "id": 6
+    },
+    {
+      "name": "Playstation 2 Racing Pack",
+      "price": "1999",
+      "id": 7
     }
   ]
 }

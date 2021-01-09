@@ -14,6 +14,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatInputModule } from '@angular/material/input';
+import { MatTableModule } from '@angular/material/table';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -57,7 +58,8 @@ registerLocaleData(localePt);
     MatSnackBarModule,
     HttpClientModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    MatTableModule
   ],
   providers: [{
     provide: LOCALE_ID,
